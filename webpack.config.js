@@ -1,8 +1,16 @@
 const path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
-    entry:'./src/script/main.js', //打包的入口文件
+    entry:{
+        main:'./src/script/main.js',
+        a:'./src/script/a.js'
+    },
     output:{
         path:path.resolve(__dirname, './dist/js'),        
-        filename:'bundle.js'
-    }
+        filename:'[name]-[chunkhash].js'
+    },
+    plugins:[
+        new HtmlWebpackPlugin()
+    ]
 }
