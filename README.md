@@ -10,3 +10,11 @@ module.exports = {
         filename:'bundle.js'
     }
 }
+
+#minify
+minify: {
+    removeComments: true,//删除注释
+    collapseWhitespace: true,//删除空格
+}
+自动化生成项目中的html
+通过new webpacklpugin 对应entry中入口的文件
