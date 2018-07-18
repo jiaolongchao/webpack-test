@@ -18,8 +18,8 @@ module.exports = {
             inject: 'head', //指定引入标签的位置
             title: 'webpack is good',
             minify: {
-                removeComments: true,//删除注释
-                collapseWhitespace: true,//删除空格
+                //removeComments: true,//删除注释
+                //collapseWhitespace: true,//删除空格
             }
         })
     ]
