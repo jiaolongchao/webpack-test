@@ -1,5 +1,8 @@
+@import './layer.less';
 @import './flex.css';
-
 html,body{
     background-color: red
+}
+.abc{
+    display: flex;
 }

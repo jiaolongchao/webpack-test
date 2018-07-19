@@ -27,20 +27,15 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [
-                    {
-                        loader: 'style-loader',
-                    },
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            importLoaders: 1,
-                        }
-                    },
-                    {
-                        loader: 'postcss-loader'
-                    }
-                ]
+                loader:'style-loader!css-loader?importLoaders=1!postcss-loader'
+            },
+            {
+                test:/\.less$/,
+                loader:'style!css!postcss!less'
+            },
+            {
+                test:/\.sass$/,
+                loader:'style!css!postcss!less'
             }
         ]
     },   
