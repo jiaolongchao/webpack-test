@@ -26,19 +26,28 @@ module.exports = {
                 }
             },
             {
+                test: /\.(png|jpg|gif|svg)$/i,
+                loader: 'url-loader',
+                query: {
+                    limit: 100000,
+                    name: 'assets/[name]-[hash:5].[ext]'
+                }
+            },
+            {
                 test: /\.css$/,
-                loader:'style-loader!css-loader?importLoaders=1!postcss-loader'
+                loader: 'style-loader!css-loader?importLoaders=1!postcss-loader',
+
             },
             {
-                test:/\.less$/,
-                loader:'style!css!postcss!less'
+                test: /\.less$/,
+                loader: 'style!css!postcss!less'
             },
             {
-                test:/\.sass$/,
-                loader:'style!css!postcss!less'
+                test: /\.sass$/,
+                loader: 'style!css!postcss!less'
             }
         ]
-    },   
+    },
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',

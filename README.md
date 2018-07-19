@@ -30,3 +30,7 @@ minify: {
 #postcss-loader
 loader:"style-loader!css-loader?importLoaders=1!postcss-loader"
 importLoader=1可以处理在Css文件中通过import引入进来的文件
+
+#file-loader
+在模板中如果要引用相对路径的图片文件可以使用${require('../../assets/bg.png')} 这种方法
+url-loader 当你的文件大于一个指定的limit值的时候 会直接使用file-loader 当小于这个值的时候会自动将文件转换为一个base64位的编码
